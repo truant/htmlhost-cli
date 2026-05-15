@@ -1,6 +1,6 @@
 {
   "name": "@htmlhost/cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CLI for publishing local HTML files to HTMLHost.ai shareable URLs.",
   "license": "MIT",
   "type": "module",
