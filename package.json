@@ -1,0 +1,45 @@
+{
+  "name": "@htmlhost/cli",
+  "version": "0.1.1",
+  "description": "CLI for publishing local HTML files to HTMLHost.ai shareable URLs.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "htmlhost": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "html",
+    "hosting",
+    "cli",
+    "agents",
+    "deploy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truant/htmlhost-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/truant/htmlhost-cli/issues"
+  },
+  "homepage": "https://github.com/truant/htmlhost-cli#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  }
+}
