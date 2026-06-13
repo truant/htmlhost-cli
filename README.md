@@ -30,6 +30,36 @@ Deploy an HTML file:
 htmlhost deploy report.html
 ```
 
+Deploy to a custom subdomain you have already created:
+
+```bash
+htmlhost deploy report.html --site customer-preview
+```
+
+Group related pages into a project folder. Unknown project names are created automatically, and every project gets a shareable index URL like `https://yourname.htmlhost.ai/proj/sprint-review/`:
+
+```bash
+htmlhost deploy report.html --project sprint-review
+```
+
+List the pages you have published, with their projects and view counts:
+
+```bash
+htmlhost list
+```
+
+Update an existing page without changing its public URL:
+
+```bash
+htmlhost update https://yourname.htmlhost.ai/p/abc123/report.html report.html
+```
+
+You can also pass the page ID from the URL:
+
+```bash
+htmlhost update abc123 report.html
+```
+
 The CLI stores your API key at `~/.config/htmlhost/config.json` with user-only file permissions. You can also use environment variables:
 
 ```bash
@@ -43,6 +73,7 @@ export HTMLHOST_API_URL=https://htmlhost.ai/api/deploy
 1. Agent creates report.html
 2. Agent runs htmlhost deploy report.html
 3. Agent returns the public URL
+4. For revisions, agent runs htmlhost update <url> report.html and returns the same URL
 ```
 
 This works well with Codex, Claude Code, Cursor, and other shell-capable agents.

@@ -1,6 +1,6 @@
 {
   "name": "@htmlhost/cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CLI for publishing local HTML files to HTMLHost.ai shareable URLs.",
   "license": "MIT",
   "type": "module",
@@ -36,7 +36,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "check": "tsc --noEmit",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "test": "npm run build && node --test test/*.test.js"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
